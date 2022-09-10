@@ -20,7 +20,7 @@ def get_image_urls(wd, delay, max_images):
         wd.execute_script("window.scrollTo(0, document.body.scrollHeight);")
         time.sleep(delay)
 
-    url = "https://www.google.com/search?q=rocksy+light&tbm=isch&ved=2ahUKEwiOwdqpofv5AhWwhJUCHfC9Ap0Q2-cCegQIABAA&oq=rocksy+light&gs_lcp=CgNpbWcQAzIECCMQJzIECCMQJzoFCAAQgAQ6BggAEB4QBzoGCAAQChAYOgQIABAYUOcDWOATYKsWaABwAHgAgAHTAYgBmAmSAQUwLjUuMpgBAKABAaoBC2d3cy13aXotaW1nwAEB&sclient=img&ei=aKoUY47tFLCJ1sQP8PuK6Ak&bih=967&biw=958"
+    url = "https://www.google.com/search?q=egrilo&sxsrf=ALiCzsbCbNPLeVXeVHYBY_-cnmQ8-HjoNg:1662817764370&source=lnms&tbm=isch&sa=X&ved=2ahUKEwi0l6_xror6AhV3rpUCHZuRASgQ_AUoAXoECAEQAw&biw=1920&bih=975&dpr=1"
 
     wd.get(url)
 
@@ -71,7 +71,7 @@ def download_image(download_path, url, file_name):
     except Exception as e:
         print('FAILED - ', e)
 
-urls = get_image_urls(wd, 5, 3)
+urls = get_image_urls(wd, 5, 10)
 
 for i, url in enumerate(urls):
     download_image("imgs/", url, str(i) + ".jpg")
